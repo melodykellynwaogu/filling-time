@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Register Form</h1>
+        <p>Plese fill out the required information</p>
+            <form id="registration-form" method="POST" action="index.html">
+                <fieldset>
+                    <label for="first-name">Enter Your First Name: <input id="first-name" type="text" name="first-name" required /></label>
+                    <label for="last-name">Enter Your Last name: <input id="last-name" type="text" name="last-name" required /></label>
+                    <label for="new-password">Create Your Password: <input type="password" id="new-password" pattern="[a-z0-5]{8,}" name="new-password" /></label>
+                    <label for="email">Email: <input id="email" type="email" name="email" required /></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Account type (required)</legend>
+                    <label for="personal-account">Personal</label><input type="radio" id="personal-account"  name="account_type" value="personal" checked/>
+                    <label for="Business-account" >Business</label><input type="radio" id="business-account"  name="account_type" value="business"/>
+                </fieldset> 
+                <fieldset>
+                    <label for="profile-picture">Upload a profile picture: </Picture><input id="profil-picture" type="file" name="file"/></label>
+                    <label for="age">Input your age (years)<input id="age" type="number" min="13" max="100"/></label>
+                    <label for="referrer">How did you hear about us?
+                        <select id="referrer" name="referrer">
+                            <option value="choose">Choose one</option>
+                            <option value="friend">A friend</option>
+                            <option value="search">Search engine</option>
+                            <option value="Social">Socila Medial</option>
+                            <option value="others">0thers</option>
+                        </select>
+                    </label>
+                    <label for="bio">
+                        <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Tell us about yourself"></textarea>
+                </fieldset>
+                    <div id="terms-modal" class="modal">
+                        <div class="modal-content">
+                            
+                            <h2>Terms and Conditions</h2>
+                             <p>participating you acknowledge that you have red, understood, and agree to abide by the rules and regulations.
+                                <em>ON NO ACCOUNT SHOULD YOU SHARE YOUR PASSWORD WITH ANYONE.</em>
+                                And by checking the box below you agree to our term and conditions.
+                             </p>
+                             <label for="terms"><input id="terms" type="checkbox" name="terms" required />I agree to the terms and conditions</label>                    
+                        </div>
+                    </div>
+                <input type="submit" value="Submit">
+            </form>    
+    </body>
+</html>
+                
